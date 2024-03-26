@@ -35,14 +35,14 @@ Criado apenas para exemplificar, foi tomado o Verbo POST :
  - CriarListaTarefasAsync_CallsAddAsyncOnRepository() ---  Teste para Quando está adicionando corretamente (inclusive observável no Banco de dados)
  - CriarListaTarefasAsync_ThrowsException_WhenRepositoryFails()   --- Teste para Quando não está adicionando corretamente o dado.
  
-# Tecnologías utilizadas:
+# Tecnologias utilizadas:
 
-.Net 7 / C#
-Microsoft.AspNetCore.OpenApi
-Banco de dados MongoDB
-MongoDB.Driver
-Xunit
-MOQ
+ - .Net 7 / C#
+ - Microsoft.AspNetCore.OpenApi
+ - Banco de dados MongoDB
+ - MongoDB.Driver
+ - Xunit
+ - MOQ
 
 # Acesso ao MongoDB:
 
@@ -50,4 +50,5 @@ MOQ
   "ConnectionString": "mongodb+srv://admin:admin@cluster0.pwbpkzk.mongodb.net/",
   "DatabaseName": "listaTarefaDB"
 },
-# Qualquer dúvida estou a disposição.
+
+Qualquer dúvida estou a disposição.

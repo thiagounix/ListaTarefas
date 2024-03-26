@@ -1,6 +1,5 @@
 ﻿using ListaTarefa.Application.Entities;
 using ListaTarefa.Domain.Interfaces.Repository;
-using System.Linq.Expressions;
 
 namespace ListaTarefas.Application.Services
 {

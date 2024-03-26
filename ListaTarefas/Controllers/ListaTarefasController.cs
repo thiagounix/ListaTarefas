@@ -2,7 +2,6 @@ using ListaTarefa.Application.Entities;
 using ListaTarefas.Application.DTO;
 using ListaTarefas.Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading;
 
 
 namespace ListaTarefas.Controllers

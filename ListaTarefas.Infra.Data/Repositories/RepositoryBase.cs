@@ -1,7 +1,5 @@
 ﻿using ListaTarefa.Domain.Interfaces.Entities;
 using MongoDB.Driver;
-using System.Linq.Expressions;
-using System.Threading;
 
 namespace ListaTarefas.Infra.Data.Repositories
 {

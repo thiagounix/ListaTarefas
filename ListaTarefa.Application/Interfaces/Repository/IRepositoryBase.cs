@@ -1,7 +1,4 @@
-﻿using System.Linq.Expressions;
-using System.Threading;
-
-namespace ListaTarefa.Domain.Interfaces.Repository
+﻿namespace ListaTarefa.Domain.Interfaces.Repository
 {
     public interface IRepositoryBase<T> where T : class
     {

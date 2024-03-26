@@ -27,4 +27,28 @@ public class ListaTarefasServiceTests
         // Assert
         mockRepository.Verify(repo => repo.CriarListaTarefasAsync(It.Is<EntityListaTarefas>(t => t.Descricao == "Teste" && t.Nome == "Lista TODO" && t.Realizado == false), cancellationToken), Times.Once);
     }
+    [Fact]
+    public async Task CriarListaTarefasAsync_ThrowsException_WhenRepositoryFails()
+    {
+        // Arrange
+        var mockRepository = new Mock<IListaTarefasRepository>();
+        var service = new ListaTarefasService(mockRepository.Object);
+        var taskItem = new EntityListaTarefas
+        {
+            Nome = "Lista com Erro",
+            Descricao = "Erro esperado",
+            Realizado = false,
+            CreationDate = DateTime.Now,
+            UpdateDate = DateTime.Now
+        };
+        var cancellationToken = CancellationToken.None;
+
+        mockRepository.Setup(repo => repo.CriarListaTarefasAsync(It.IsAny<EntityListaTarefas>(), cancellationToken))
+                      .ThrowsAsync(new InvalidOperationException("Erro simulado ao acessar o banco de dados."));
+
+        // Act & Assert
+        var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => service.CriarListaTarefasAsync(taskItem, cancellationToken));
+        Assert.Equal("Erro simulado ao acessar o banco de dados.", exception.Message);
+    }
+
 }

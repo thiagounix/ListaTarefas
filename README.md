@@ -1,5 +1,6 @@
 # API_CRUD Solicitações: 
-Build a CRUD API REST
+Build a CRUD API REST.
+
 Segue, abaixo, o exercício proposto:
 # Tarefa:
 Desenvolver um CRUD utilizando API REST, seguindo boas práticas de programação. O objeto do CRUD será uma lista de tarefas.​
@@ -13,12 +14,12 @@ ________________________________________________________________________________
 # Resolução
 Propriedades: 
 
-Id (Id do tipo GUID da lista)
-Nome (Nome da lista, ex." Lista de Compras)
-Descricao (Descrição mais detalhada da lista, Ex. Carnes, frios, feijão, arroz ...)
-Realizado (Tipo bool, se foi ja realizado ou não, algumas tarefas ja podem ser criadas como realizas.)
-CreationDate (Data de criação da lista)
-UpdateDate (Ultima data de atualização)
+Id (Id do tipo GUID da lista).
+Nome (Nome da lista, ex." Lista de Compras).
+Descricao (Descrição mais detalhada da lista, Ex. Carnes, frios, feijão, arroz ...).
+Realizado (Tipo bool, se foi ja realizado ou não, algumas tarefas ja podem ser criadas como realizas.).
+CreationDate (Data de criação da lista).
+UpdateDate (Ultima data de atualização).
 
 Solução criado em camadas simples, separadas fisicamente por pastas e logicamente por projetos: API, Application, Dominio, Infra, e de Tests.
 Utilizado apenas os 4 verbos básicos de API REST.
